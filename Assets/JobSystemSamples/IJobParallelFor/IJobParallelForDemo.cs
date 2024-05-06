@@ -1,11 +1,13 @@
 using System.Linq;
 using Unity.Jobs;
+using Unity.Burst;
 using Unity.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
 public class IJobParallelForDemo : MonoBehaviour
 {
+    [BurstCompile]
     private struct TestJob : IJobParallelFor
     {
         [ReadOnly] private NativeArray<float> a;

@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Unity.Jobs;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Mathematics;
+using UnityEngine;
 
 public class IJobDemo : MonoBehaviour
 {
+    [BurstCompile]
     private struct TestJob : IJob
     {
         [ReadOnly] public float a;
